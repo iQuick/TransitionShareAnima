@@ -1,6 +1,7 @@
 package me.imli.shareanima;
 
 import me.imli.shareanima.blur.BlurView;
+import me.imli.shareanima.util.SystemBarTintManager;
 import me.imli.shareanima.view.ScaleImageView;
 import me.imli.shareanima.view.ScaleImageView.ImageViewListener;
 import android.os.Bundle;
@@ -33,6 +34,11 @@ public class ImageFragment extends Fragment{
 		
 		mScaleImageView = (ScaleImageView) rootView.findViewById(R.id.fragment_image_scaleimageview);
 		mScaleImageView.setBlurView(blurView);
+		
+//		SystemBarTintManager manager = new SystemBarTintManager(getActivity());
+//		View view = (View) mScaleImageView.getParent();
+//		view.setPadding(0, manager.getConfig().getPixelInsetTop(true), 0, 0);
+		
 		return rootView;
 	}
 	
